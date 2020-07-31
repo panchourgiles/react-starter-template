@@ -13,7 +13,10 @@ const rules = [
 
 module.exports = {
   entry: {
-    app: path.join(__dirname, 'src', 'index.js'),
+    app: [
+      path.join(__dirname, 'src/frontend', 'index.js'),
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true'
+    ]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -22,7 +25,7 @@ module.exports = {
   module: { rules },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
+      template: path.join(__dirname, 'src/frontend', 'index.html'),
       filename: 'index.html',
       hash: true
     }),
