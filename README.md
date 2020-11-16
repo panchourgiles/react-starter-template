@@ -1,4 +1,4 @@
-# Boilerplate for react app <br />
+# Starter template for react app <br />
 
 ## Installation <br />
 
